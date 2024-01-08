@@ -14,8 +14,6 @@
 .title {
   width: 100%;
   float: left;
-  margin-bottom: 40px;
-  padding-bottom: 10px;
   font-family: 'open_sansbold';
   font-size: 1em;
   font-weight: bold;
@@ -149,7 +147,6 @@
 .main_header {
   background: #ffffff;
   z-index: 1;
-  padding: 2em 0;
 }
 
 .main_header .content {
@@ -333,7 +330,11 @@
 
 .section-servicos .content {
   float: left;
-  padding: 5em 0 0em 0;
+  padding: 2em 0 0;
+}
+
+.section-servicos .content .title {
+  padding: 0 0 2em 0;
 }
 
 .hover_servicos {
@@ -417,6 +418,7 @@
   position: relative;
   border: none;
   display: block;
+
 }
 
 .hover_servicos .appIcone {
@@ -430,7 +432,7 @@
   color: #fff;
   text-align: center;
   width: 100%;
-  font-size: 3em;
+
 }
 
 .hover_servicos .appTitulo {
@@ -465,16 +467,14 @@
   width: 100%;
   display: block;
   text-align: center;
-  padding: 0.5em;
 }
 
 .hover_servicos .descricao h4 {
   width: 100%;
   float: left;
   color: #4a688e;
-  font-size: 1.3em;
   font-family: 'open_sansregular', sans-serif;
-  margin-bottom: 2em;
+
 }
 
 .hover_servicos .descricao p {
@@ -495,7 +495,7 @@
 
 .section-galeria .content {
   float: left;
-  padding: 5em 0 0em 0;
+  padding: 2em 0 0em 0;
 }
 
 .galeria-barber {
@@ -683,7 +683,7 @@
 
   .section-servicos .content {
     float: left;
-    padding: 5em 0 5em 0;
+    padding: 2em 0;
   }
 
   .section-galeria .content {
