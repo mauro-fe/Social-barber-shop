@@ -535,13 +535,20 @@
 }
 
 .galeria-barber .foto {
-  width: 100%;
+  width: 50%;
   float: left;
   display: block;
   margin-bottom: 5%;
   border: 1px #353535 solid;
   position: relative;
   overflow: hidden;
+}
+
+.galeria-barber img {
+  width: 200px;
+  display: block;
+  box-sizing: border-box;
+  height: 130px;
 }
 
 .foto:hover .image-link {
