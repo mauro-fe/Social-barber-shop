@@ -501,6 +501,14 @@
   margin-bottom: 1em;
 }
 
+.section-servicos .servicos_separator {
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 2em;
+}
+
 /*Fim de Serviços*/
 
 /*Galeria*/
