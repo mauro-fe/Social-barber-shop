@@ -163,9 +163,10 @@
   opacity: 70%;
 }
 
-.main_header_logo {
+.main_header_logo a {
   font-size: 0;
   float: left;
+  color: #000;
 }
 
 .main_header_logo img {
@@ -307,7 +308,7 @@
 
 .topoPag img {
   width: 100%;
-  height: 10em;
+  height: 20em;
 }
 
 .topoPag .centraliza h1 {
@@ -345,7 +346,7 @@
 }
 
 .hover_servicos {
-  width: 15.62rem;
+  width: 15.62em;
   height: 100%;
   margin-bottom: 2em;
   float: left;
@@ -369,7 +370,7 @@
   background: rgba(255, 0, 98, 0);
   border-radius: 100%;
   z-index: 2;
-  width: 200px;
+  width: 15.62em;
   height: 100%;
   position: absolute;
   transition: all .4s;
@@ -497,6 +498,7 @@
 /*Galeria*/
 .section-galeria {
   background-color: #0e2a34;
+  display: none;
 }
 
 .section-galeria .content {
