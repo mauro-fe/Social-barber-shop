@@ -340,7 +340,9 @@
 }
 
 .section-servicos .content {
-  padding: 2em 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-servicos .content .title {
@@ -512,85 +514,6 @@
 
 /*Fim de Serviços*/
 
-/*Galeria*/
-.section-galeria {
-  background-color: #0e2a34;
-  display: none;
-}
-
-.section-galeria .content {
-  float: left;
-  padding: 2em 0 0em 0;
-}
-
-.section-galeria .title {
-  padding-bottom: 1em;
-}
-
-.galeria-barber {
-  width: 100%;
-  float: left;
-  position: relative;
-  overflow: hidden;
-}
-
-.galeria-barber .foto .mascara {
-  background: rgba(0, 0, 0, 0);
-  transition: 0.5s;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-}
-
-.galeria-barber .foto .image-link {
-  display: block;
-  position: absolute;
-  left: 35%;
-  bottom: 25px;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 1.8em;
-  background: transparent;
-  color: #ffffff;
-  text-decoration: none;
-  transition: all .3s ease-in-out;
-  opacity: 0;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.galeria-barber .foto {
-  width: 50%;
-  float: left;
-  margin-bottom: 5%;
-  border: 1px #353535 solid;
-  position: relative;
-  overflow: hidden;
-}
-
-.galeria-barber img {
-  width: 12.5em;
-  display: block;
-  box-sizing: border-box;
-  height: 140px;
-}
-
-.foto:hover .image-link {
-  bottom: 20%;
-  transition: all .3s ease-in-out;
-  opacity: 1;
-}
-
-.foto:hover .mascara {
-  background: rgba(234, 34, 64, 0.55);
-}
-
-/*Termina Galeria*/
-
 /* Começa Localização */
 
 .section-localização {
@@ -662,23 +585,40 @@
 }
 
 @media (min-width: 37.5em) {
-
   .topoPag .img-mobile {
     display: none;
   }
 
   .topoPag .img-desktop {
     display: block;
+    width: 100%;
   }
 
   .section-servicos .content {
-    flex-direction: column;
-  }
-
-  .section-servicos .content_row {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+  }
+
+  .hover_servicos,
+  .hover_servicos .hoverMascara,
+  .hover_servicos .appIcone {
+    width: 13.75em;
+    height: 13.75em;
+  }
+
+  .section-servicos .servicos_separator {
+    width: 0;
+    height: 0;
+    background-color: #000;
+    margin-bottom: 0;
+    box-shadow: 0;
+  }
+
+  .main_footer .content {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -686,49 +626,6 @@
 /*768PX BREAKPOINT*/
 /*768 dividido por 16 = 48em*/
 @media (min-width:48em) {
-
-  .main_header_logo {
-    position: absolute;
-    margin-top: 0.5em;
-    background: transparent;
-    z-index: 98;
-  }
-
-  .section_title {
-    font-size: 2em;
-    font-weight: 300;
-    text-align: left;
-  }
-
-  .blocoArtigo .desc h3 {
-    font-size: 1.5em;
-  }
-
-  .box-css:nth-of-type(2n+0),
-  .box-css {
-    float: left;
-    width: 23.5%;
-    margin-right: 2%;
-  }
-
-  .box-css:nth-of-type(4n+0) {
-    margin-right: 0;
-  }
-
-  .box-css h1 {
-    font-size: 1em !important;
-  }
-
-  .galeria-barber .foto {
-    width: 48%;
-    margin-right: 4%;
-    margin-bottom: 4%;
-  }
-
-  .galeria-barber .foto:nth-of-type(2n+0) {
-    margin-right: 0;
-  }
-
   .hover_servicos {
     width: 32%;
     margin-right: 2%;
@@ -738,23 +635,6 @@
   .hover_servicos:nth-of-type(3n+0) {
     margin-right: 0px;
   }
-
-  .section-servicos .content {
-    float: left;
-    padding: 2em 0;
-  }
-
-  .section-galeria .content {
-    float: left;
-    padding: 5em 0 5em 0;
-  }
-
-  .section-contato .content {
-    float: left;
-    padding: 5em 0 5em 0;
-  }
-
-
 
   .coluna {
     width: 48%;
@@ -779,11 +659,6 @@
   }
 
 }
-
-
-/*1024PX BREAKPOINT*/
-/*1024 dividido por 16 = 64em*/
-@media (min-width:64em) {}
 
 /*1280PX BREAKPOINT*/
 /*1280 dividido por 16 = 80em*/
@@ -851,18 +726,3 @@
     letter-spacing: 20px;
   }
 }
-
-/*1366PX BREAKPOINT*/
-/*1366 dividido por 16 = 85,375em*/
-@media (min-width:85em) {
-
-  .content {
-    width: 80%;
-    margin: 0 10%;
-  }
-
-}
-
-/*1600PX BREAKPOINT*/
-/*1600 dividido por 16 = 100em*/
-@media (min-width:100em) {}
