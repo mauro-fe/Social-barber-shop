@@ -572,6 +572,9 @@
 
 }
 
+/*600PX BREAKPOINT*/
+/*600 dividido por 16 = 37.5em*/
+
 @media (min-width: 37.5em) {
 
   .topoPag .centraliza h1 {
@@ -589,7 +592,7 @@
   }
 
   .section-servicos .container {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .section-servicos .content {
@@ -597,7 +600,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-
   }
 
   .hover_servicos {
@@ -630,7 +632,6 @@
 /*768 dividido por 16 = 48em*/
 @media (min-width:48em) {
 
-
   .hover_servicos:nth-of-type(3n+0) {
     margin-right: 0px;
   }
@@ -657,6 +658,23 @@
     font-size: 4em;
   }
 
+  .title {
+    font-size: 1.2em;
+  }
+
+  .section-localização {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-localização .content {
+    max-width: 80%;
+  }
+
+  .section-localização .content .map {
+    height: 25em;
+  }
 }
 
 /*1280PX BREAKPOINT*/
