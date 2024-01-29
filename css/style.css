@@ -359,7 +359,6 @@
   width: 15.62em;
   height: 100%;
   margin-bottom: 2em;
-  float: left;
   position: relative;
   overflow: hidden;
 }
@@ -552,7 +551,6 @@
 }
 
 .container {
-  float: left;
   width: 100%;
 }
 
@@ -574,17 +572,13 @@
 
 }
 
-/*600PX BREAKPOINT*/
-/*600 dividido por 16 = 37,5em*/
-@media (min-width:37em) {
+@media (min-width: 37.5em) {
 
   .topoPag .centraliza h1 {
     font-size: 3em;
     margin-top: 20px;
   }
-}
 
-@media (min-width: 37.5em) {
   .topoPag .img-mobile {
     display: none;
   }
@@ -594,11 +588,20 @@
     width: 100%;
   }
 
+  .section-servicos .container {
+    max-width: 80%;
+  }
+
   .section-servicos .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+  }
+
+  .hover_servicos {
+    margin: 1em 0 0;
   }
 
   .hover_servicos,
@@ -626,11 +629,7 @@
 /*768PX BREAKPOINT*/
 /*768 dividido por 16 = 48em*/
 @media (min-width:48em) {
-  .hover_servicos {
-    width: 32%;
-    margin-right: 2%;
-    margin-bottom: 0em;
-  }
+
 
   .hover_servicos:nth-of-type(3n+0) {
     margin-right: 0px;
