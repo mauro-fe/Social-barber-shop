@@ -553,7 +553,6 @@
   width: 100%;
 }
 
-
 /*480PX BREAKPOINT*/
 /*480 dividido por 16 = 30em*/
 @media (min-width:30em) {
@@ -603,13 +602,6 @@
 
   .hover_servicos {
     margin: 1em 0 0;
-  }
-
-  .hover_servicos,
-  .hover_servicos .hoverMascara,
-  .hover_servicos .appIcone {
-    width: 13.75em;
-    height: 13.75em;
   }
 
   .section-servicos .servicos_separator {
@@ -683,15 +675,10 @@
 /*1196PX BREAKPOINT*/
 /*1196 dividido por 16 = 74.75em*/
 @media (min-width:74.75em) {
-  .section-servicos .content {
-    gap: 2em;
-  }
-
   .hoverMascara .hover_servicos_hover {
     width: 100%;
     height: 100%;
   }
-
 
 }
 
@@ -715,9 +702,7 @@
   }
 
   .main_header_nav_item {
-    position: relative;
     display: inline-block;
-    float: left;
   }
 
   .main_header_nav_item:last-of-type {
@@ -744,21 +729,17 @@
     color: #449ad3;
   }
 
-  .galeria-barber .foto:nth-of-type(2n+0),
-  .galeria-barber .foto {
-    width: 23.5%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-  }
-
-  .galeria-barber .foto:nth-of-type(4n+0) {
-    margin-right: 0;
-  }
-
   .topoPag .centraliza h1 {
     font-size: 5.5em;
     margin-top: 50px;
     letter-spacing: 20px;
+  }
+
+  .section-servicos .content {
+    justify-content: center;
+
+    gap: 2em;
+
   }
 }
 
@@ -776,5 +757,11 @@
 
   .main_footer .title {
     font-size: 3em;
+  }
+
+
+
+  .hover_servicos.appIcone {
+    width: 500px;
   }
 }
