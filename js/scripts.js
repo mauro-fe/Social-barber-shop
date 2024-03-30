@@ -4,10 +4,10 @@ $(function () {
     $('.mobile_action').click(function () {
         if (!$(this).hasClass('active')) {
             $(this).addClass('active');
-            $('.main_header_nav').animate({ 'left': '0px' }, 500);
+            $('.main_header_nav').animate({ 'left': '0px' }, 800);
         } else {
             $(this).removeClass('active');
-            $('.main_header_nav').animate({ 'left': '-100%' }, 500);
+            $('.main_header_nav').animate({ 'left': '-100%' }, 1000);
         }
     });
 
@@ -21,9 +21,7 @@ $(function () {
             }
 
         } else {
-
-            $('.main_header').removeClass('fixed');
-
+            $('.main_header').removeClass('fixed')
         }
     });
 

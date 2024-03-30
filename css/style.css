@@ -158,19 +158,22 @@
 }
 
 .main_header.fixed {
-  display: block;
   position: fixed;
-  z-index: 99;
   opacity: 70%;
 }
 
-.main_header_logo a {
+.main_header .agendar-horario {
   text-transform: uppercase;
-  color: #000;
-  font-weight: 900;
-  font-size: .8em;
+  color: #fff;
+  background-color: #292929dd;
+  padding: .8em;
+  font-weight: bold;
+  font-size: 1em;
   text-shadow: 5px 5px 15px #000;
-
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  line-height: .2;
+  border-radius: 1em;
 }
 
 .main_header_logo img {
@@ -203,7 +206,7 @@
     left: -100%;
     background-color: #0e2a34;
     top: 0;
-    width: 76%;
+    width: 50%;
     min-width: 200px;
     max-width: 360px;
     height: 100%;
@@ -213,6 +216,7 @@
     -moz-box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.75);
     z-index: 99;
+
   }
 
   .main_header_nav_item {
@@ -220,16 +224,18 @@
     width: 100%;
     position: relative;
     border-bottom: 1px #273b42 solid;
+    font-size: 1.5em;
   }
 
   .main_header_nav_item>a {
     float: left;
     width: 100%;
-    padding: 8px 23px;
+    padding: 1em 0;
     font-family: 'open_sansregular';
     text-decoration: none;
-    color: #ffffff;
+    color: #e83654;
     font-size: 1em;
+    text-align: center;
   }
 
   .main_header_nav_item:hover,
