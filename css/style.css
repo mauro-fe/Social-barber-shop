@@ -147,7 +147,7 @@
 /*HEADER*/
 .main_header {
   background: #ffffff;
-  z-index: 1;
+  z-index: 99;
 }
 
 .main_header .content {

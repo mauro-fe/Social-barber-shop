@@ -12,7 +12,7 @@ $(function () {
     });
 
     //HEADER
-    $(window).scroll(function () {
+    $(window).scroll(function scroll() {
 
         if ($(this).scrollTop() > 0) {
 
