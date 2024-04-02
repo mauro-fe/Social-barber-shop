@@ -582,7 +582,7 @@ body {
 .section-valores_tabela th,
 .section-valores_tabela td {
   border: 1px solid #4a688e;
-  padding: .5em 0 .5em 1.2em;
+  padding: .5em .2em .5em 1.2em;
 }
 
 /* Termina valores */
