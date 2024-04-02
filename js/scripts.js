@@ -19,7 +19,6 @@ $(function () {
             if (!$('.main_header').hasClass('fixed')) {
                 $('.main_header').stop().addClass('fixed');
             }
-
         } else {
             $('.main_header').removeClass('fixed')
         }

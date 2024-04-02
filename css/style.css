@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600;900&family=Roboto+Condensed:wght@900&display=swap');
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#000, #aaa 30%, #000);
+}
+
 /*CLASS*/
+.container {
+  max-width: 95%;
+}
+
 .branco {
   color: #ffffff;
 }
@@ -14,7 +31,7 @@
 .title {
   width: 100%;
   float: left;
-  font-family: 'open_sansbold';
+  font-weight: 900;
   font-size: 1.6rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -160,6 +177,7 @@
 .main_header.fixed {
   position: fixed;
   opacity: 70%;
+  top: 0;
 }
 
 .main_header .agendar-horario {
@@ -258,7 +276,6 @@
     float: right;
     display: block;
   }
-
 }
 
 /*PAG*/
@@ -316,9 +333,8 @@
 .topoPag .centraliza {
   width: 90%;
   height: auto;
-  top: 26%;
   position: absolute;
-  margin: 0 5%;
+  bottom: 40%;
 }
 
 .topoPag .img-mobile {
@@ -327,6 +343,10 @@
 }
 
 .topoPag .img-desktop {
+  display: none;
+}
+
+.main_content .topoPag .branco {
   display: none;
 }
 
@@ -547,6 +567,7 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 2px 10px #000;
+  padding: .4em;
 }
 
 .section-valores_tabela th {
@@ -561,11 +582,10 @@
 .section-valores_tabela th,
 .section-valores_tabela td {
   border: 1px solid #4a688e;
-  padding: .5rem 1rem;
+  padding: .6rem 1.6rem;
 }
 
 /* Termina valores */
-
 
 /* Começa localizacao */
 
@@ -574,8 +594,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2em;
-
+  padding: 1em 0 2.5em 0;
 }
 
 .section-localizacao .map {
@@ -586,9 +605,7 @@
 
 /* Termina localizacao */
 
-
 /*FOOTER*/
-
 .main_footer {
   background-color: #0e2a34;
   color: #fff;
@@ -599,8 +616,11 @@
   float: left;
   display: flex;
   flex-direction: column;
-  font-size: .8rem;
-  padding: 4rem 0 5rem 0;
+  padding: 2rem 0 5rem 0;
+}
+
+.main_footer .info {
+  font-size: 1em;
 }
 
 .container {
@@ -634,6 +654,12 @@
     margin-top: 20px;
   }
 
+  .main_content .topoPag .branco {
+    display: block;
+    font-size: 2em;
+    letter-spacing: .3em;
+  }
+
   .topoPag .img-mobile {
     display: none;
   }
@@ -641,6 +667,12 @@
   .topoPag .img-desktop {
     display: block;
     width: 100%;
+  }
+
+  .section-chamada .mascara {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .section-servicos .container {
@@ -664,6 +696,11 @@
     background-color: #000;
     margin-bottom: 0;
     box-shadow: 0;
+  }
+
+  .section-valores_tabela {
+    width: 80%;
+    padding: 1.2em;
   }
 
   .main_footer .content {
@@ -692,7 +729,20 @@
     margin-right: 0;
   }
 
+  .section-valores_tabela {
+    width: 70%;
+    font-size: 1.4em;
+  }
 
+  .section-valores_tabela th,
+  .section-valores_tabela td {
+    padding: .5em;
+  }
+
+  .main_content .topoPag .branco {
+    display: block;
+    font-size: 3em
+  }
 }
 
 /*960PX BREAKPOINT*/
@@ -700,6 +750,10 @@
 @media (min-width:60em) {
   .title {
     font-size: 1.2em;
+  }
+
+  .topoPag .img-desktop {
+    max-width: 90%;
   }
 
   .topoPag .centraliza h1 {
@@ -744,6 +798,10 @@
 /*1280PX BREAKPOINT*/
 /*1280 dividido por 16 = 80em*/
 @media (min-width:80em) {
+
+  .main_content .topoPag .branco {
+    font-size: 3.6em
+  }
 
   .mobile_action {
     display: none;
@@ -804,15 +862,20 @@
     letter-spacing: 20px;
   }
 
-
   .section-servicos .content {
     justify-content: center;
     gap: 3em;
   }
 }
 
-/*1280PX BREAKPOINT*/
-/*1280 dividido por 16 = 80em*/
+@media (min-width:93.75em) {
+  .main_content .topoPag .branco {
+    font-size: 4.6em
+  }
+}
+
+/*1600px BREAKPOINT*/
+/*1600px dividido por 16 = 80em*/
 @media (min-width:100em) {
 
   .main_header .content {
@@ -820,21 +883,13 @@
   }
 
   .title {
-    font-size: 1.6em;
-  }
-
-  .main_footer .title {
-    font-size: 3em;
+    font-size: 2.2em;
   }
 
   .section-servicos {
     padding: 2em 5em;
   }
 
-  .section-servicos .title {
-    font-size: 2em;
-    padding-bottom: 0;
-  }
 
   .section-servicos .descricao {
     font-size: 1.5em;
@@ -846,5 +901,9 @@
 
   .section-localizacao {
     padding-bottom: 5em;
+  }
+
+  .section-localizacao .content .map {
+    height: 35em;
   }
 }
