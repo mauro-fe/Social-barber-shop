@@ -163,7 +163,6 @@ body {
 /*HEADER*/
 
 .main_header {
-  background: #ffffff;
   z-index: 99;
 }
 
@@ -785,10 +784,6 @@ body {
     font-size: 1.8em;
   }
 
-  .topoPag .img-desktop {
-    max-width: 90%;
-  }
-
   .topoPag .centraliza h1 {
     font-size: 4em;
   }
@@ -861,7 +856,7 @@ body {
   }
 
   .main_header_nav_item>a {
-    color: #0e2a34;
+    color: #4a688e;
     float: left;
     font-size: 1.4em;
     text-decoration: none;
