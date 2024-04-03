@@ -586,7 +586,7 @@ body {
 .section-valores_tabela th,
 .section-valores_tabela td {
   border: 1px solid #4a688e;
-  padding: .5em .2em .5em 1.2em;
+  padding: .5em 1em .5em .2em;
 }
 
 /* Termina valores */
@@ -727,6 +727,12 @@ body {
   .section-valores_tabela {
     width: 80%;
     padding: 1.2em;
+  }
+
+  .section-valores_tabela th,
+  .section-valores_tabela td {
+    border: 1px solid #4a688e;
+    padding: .5em 1em .5em .5em;
   }
 
   .main_footer .info {
