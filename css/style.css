@@ -46,7 +46,6 @@ body {
 .btn {
   padding: 10px 15px;
   color: #fff;
-  font-family: 'open_sansregular';
   letter-spacing: 2px;
   text-align: center;
   position: relative;
@@ -162,9 +161,20 @@ body {
 }
 
 /*HEADER*/
+
 .main_header {
   background: #ffffff;
   z-index: 99;
+}
+
+.main_header.fixed {
+  position: fixed;
+  top: 0;
+  opacity: 60%;
+}
+
+.fixed+.main_content {
+  padding-top: 99px;
 }
 
 .main_header .content {
@@ -172,12 +182,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.main_header.fixed {
-  position: fixed;
-  opacity: 70%;
-  top: 0;
 }
 
 .main_header .agendar-horario {
@@ -588,7 +592,6 @@ body {
 /* Termina valores */
 
 /* Começa localizacao */
-
 .section-localizacao {
   display: flex;
   align-items: center;
@@ -609,22 +612,37 @@ body {
 .main_footer {
   background-color: #0e2a34;
   color: #fff;
+}
 
+.main_footer .title {
+  padding-bottom: 2.6em;
+}
+
+.footer_centraliza .info {
+  font-size: 3em;
 }
 
 .main_footer .content {
   float: left;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem 0 5rem 0;
 }
 
 .main_footer .info {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
-.container {
-  width: 100%;
+.main_footer .icons_links {
+  text-decoration: none;
+  color: inherit;
+  transition: color .6s;
+}
+
+.main_footer .icons_links:hover {
+  color: #fff5;
 }
 
 /*480PX BREAKPOINT*/
@@ -642,12 +660,20 @@ body {
     margin-right: 0;
   }
 
+  .main_footer .info {
+    font-size: 1.4em;
+  }
+
 }
 
 /*600PX BREAKPOINT*/
 /*600 dividido por 16 = 37.5em*/
 
 @media (min-width: 37.5em) {
+
+  .title {
+    font-size: 1.8em;
+  }
 
   .topoPag .centraliza h1 {
     font-size: 3em;
@@ -703,10 +729,11 @@ body {
     padding: 1.2em;
   }
 
-  .main_footer .content {
-    display: flex;
-    align-items: center;
+  .main_footer .info {
+    font-size: 1.6em;
+    padding: 0 4em;
   }
+
 }
 
 
@@ -741,7 +768,7 @@ body {
 
   .main_content .topoPag .branco {
     display: block;
-    font-size: 3em
+    font-size: 2.5em
   }
 }
 
@@ -749,7 +776,7 @@ body {
 /*960 dividido por 16 = 60em*/
 @media (min-width:60em) {
   .title {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
 
   .topoPag .img-desktop {
@@ -763,7 +790,6 @@ body {
   .main_header .content {
     padding: 1em;
   }
-
 
   .section-localizacao {
     display: flex;
@@ -812,12 +838,6 @@ body {
     width: auto;
   }
 
-  .main_header_nav a:hover,
-  .main_header_nav>li:hover>a {
-    background: transparent;
-    color: #4a688e;
-  }
-
   .main_header_nav_item {
     display: inline-block;
   }
@@ -837,23 +857,27 @@ body {
   .main_header_nav_item>a {
     color: #0e2a34;
     float: left;
-    border-bottom: 2px solid transparent;
     font-size: 1.4em;
-    font-family: 'open_sansbold';
     text-decoration: none;
     text-transform: uppercase;
-    line-height: 1.5;
+    position: relative;
+    padding-bottom: 4px;
+    overflow: hidden;
   }
 
-  .main_header_nav_item>a:hover {
-    border-bottom: 2px solid #000;
-
+  .main_header_nav_item>a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    transition: width .4s ease-in-out;
   }
 
-  .main_header_nav_item:hover,
-  .main_header_nav_item>a:hover {
-    background: transparent;
-    color: #001726;
+  .main_header_nav_item>a:hover::after {
+    width: 100%;
   }
 
   .topoPag .centraliza h1 {

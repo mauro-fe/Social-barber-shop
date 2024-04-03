@@ -11,18 +11,10 @@ $(function () {
         }
     });
 
-    //HEADER
-    $(window).scroll(function scroll() {
-        $('.main_header').removeClass('fixed')
-        if ($(this).scrollTop() > 0) {
-
-            if (!$('.main_header').hasClass('fixed')) {
-                $('.main_header').stop().addClass('fixed');
-            }
-        } else {
-            $('.main_header').removeClass('fixed')
-        }
-    });
+    window.addEventListener("scroll", function () {
+        var mainHeader = document.querySelector(".main_header")
+        mainHeader.classList.toggle("fixed", window.scrollY > 0)
+    })
 
     //Scroll Ancora
     var $doc = $('html, body');
