@@ -162,6 +162,28 @@ body {
 
 /*HEADER*/
 
+.header_welcome {
+  padding: .5em 0;
+  background-color: #0e2a34;
+  text-align: center;
+
+}
+
+.header_welcome .title {
+  padding: 0;
+  color: #aaa;
+  font-size: 1em;
+  text-transform: none;
+  overflow: hidden;
+
+}
+
+.header_welcome .destaque {
+  color: #fff;
+  text-transform: uppercase;
+  filter: drop-shadow(-5px 5px 10px #999);
+}
+
 .main_header {
   z-index: 99;
 }
@@ -257,7 +279,6 @@ body {
     float: left;
     width: 100%;
     padding: .5em 0;
-    font-family: 'open_sansregular';
     text-decoration: none;
     color: #e83654;
     font-size: 1em;
@@ -359,48 +380,68 @@ body {
   float: left;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'open_sansbold';
   filter: drop-shadow(5px 5px 5px #000);
 
 }
 
 /*Serviços*/
+
 .section-servicos {
-  background-color: #f9f9f9;
-  background-image: url("../uploads/background/bg-barber.png");
-  background-repeat: repeat-x;
-  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .section-servicos .content {
+  flex-wrap: wrap;
+}
+
+.hover_servicos {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1em;
+  padding: .5em 0 1.5em;
 }
 
-.section-servicos .content_row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hover_servicos .teste {
+  overflow: hidden;
+  border-radius: 10%;
+
 }
 
+.hover_servicos .appFoto {
+  height: 18em;
+  width: 18em;
+  opacity: 50%;
+  transition: opacity 1s ease-in-out, transform .8s ease-in-out;
+  box-shadow: 0 0 10px #000;
+}
+
+.hover_servicos .appFoto:hover {
+  opacity: 100%;
+  transform: scale(120%);
+}
+
+/* 
 .hover_servicos {
   width: 15.62em;
   height: 100%;
   margin-bottom: 2em;
   position: relative;
   overflow: hidden;
-}
+} */
 
-.hover_servicos .hoverMascara {
+/* .hover_servicos .hoverMascara {
   overflow: hidden;
   border-radius: 50%;
   position: relative;
   margin-bottom: 1em;
   background-color: #939393;
-}
+} */
 
-.hover_servicos .hover_servicos_hover {
+/* .hover_servicos .hover_servicos_hover {
   left: 0;
   top: 0;
   -webkit-transform: scale(1);
@@ -426,20 +467,20 @@ body {
   transform: scale(1);
   background: rgba(48, 115, 200, 0.89);
   border-radius: 100%;
-}
-
+} */
+/* 
 .hover_servicos:hover .appIcone {
   left: 0;
   opacity: 100;
-}
+} */
 
-.hover_servicos:hover .appTitulo {
+/* .hover_servicos:hover .appTitulo {
   left: 0;
   top: 33%;
   opacity: 100;
-}
+} */
 
-.hover_servicos:hover .appFoto {
+/* .hover_servicos:hover .appFoto {
   left: 0;
   top: 0;
   opacity: 1;
@@ -450,31 +491,30 @@ body {
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
   -webkit-transition: all 500ms;
-}
+} */
 
-.hover_servicos .appFoto {
+/* .hover_servicos .appFoto {
   left: 0;
   top: 0;
   opacity: 1;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(5);
+  transform: scale(5);
   height: auto;
   position: relative;
   border: none;
   display: block;
   height: 16em;
   width: 16em;
-}
+} */
 
-.hover_servicos .appIcone,
+/* .hover_servicos .appIcone,
 .hover_servicos .hoverMascara {
   height: 100%;
   width: 100%;
-}
+} */
 
-.hover_servicos .appIcone {
+/* .hover_servicos .appIcone {
   display: block;
-  font-family: Helvetica, sans-serif;
   position: absolute;
   opacity: 0;
   top: 18%;
@@ -483,12 +523,11 @@ body {
   color: #fff;
   text-align: center;
   width: 100%;
-}
+} */
 
 
-.hover_servicos .appTitulo {
+/* .hover_servicos .appTitulo {
   display: block;
-  font-family: Helvetica, sans-serif;
   position: absolute;
   opacity: 0;
   top: 35%;
@@ -498,8 +537,8 @@ body {
   text-align: center;
   width: 100%;
   text-decoration: none;
-}
-
+} */
+/* 
 .hover_servicos .appIcone,
 .appTitulo,
 .appFoto,
@@ -509,40 +548,29 @@ body {
   -ms-transition: all 500ms;
   -o-transition: all 500ms;
   -webkit-transition: all 500ms;
-}
+} */
 
 .hover_servicos .descricao {
   background-color: transparent;
-  float: left;
   width: 100%;
   display: block;
   text-align: center;
-}
-
-.hover_servicos .descricao h4 {
-  width: 100%;
-  float: left;
+  overflow: hidden;
+  font-size: 1.5em;
   color: #4a688e;
-  font-family: 'open_sansregular', sans-serif;
-
-}
-
-.hover_servicos .descricao p {
-  width: 100%;
-  float: left;
-  color: #939393;
-  font-size: 1em;
-  font-family: 'open_sanslight', sans-serif;
-  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 .section-servicos .servicos_separator {
   display: block;
-  width: 90%;
+  width: 70%;
   height: 1px;
   background-color: #000;
   margin-bottom: 2em;
   box-shadow: 0px 2px 5px #000;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2em;
 }
 
 /*Fim de Serviços*/
@@ -700,6 +728,10 @@ body {
     align-items: center;
   }
 
+  .hover_servicos {
+    width: 50%;
+  }
+
   .section-servicos .container {
     max-width: 100%;
   }
@@ -711,8 +743,10 @@ body {
     justify-content: space-around;
   }
 
-  .hover_servicos {
-    margin: 1em 0 0;
+  .hover_servicos .appFoto {
+    border-radius: 10%;
+    height: 15em;
+    width: 15em;
   }
 
   .section-servicos .servicos_separator {
@@ -745,10 +779,6 @@ body {
 /*768PX BREAKPOINT*/
 /*768 dividido por 16 = 48em*/
 @media (min-width:48em) {
-
-  .hover_servicos:nth-of-type(3n+0) {
-    margin-right: 0px;
-  }
 
   .coluna {
     width: 48%;
@@ -807,13 +837,27 @@ body {
   }
 }
 
+/*1000PX BREAKPOINT*/
+/*1000 dividido por 16 = 62.5em*/
+@media (min-width:62.5em) {
+  .header_welcome .title {
+    font-size: 1.5em;
+  }
+
+  .header_welcome .destaque {
+    letter-spacing: 3px;
+    padding: .3em .3em;
+
+  }
+}
+
 /*1196PX BREAKPOINT*/
 /*1196 dividido por 16 = 74.75em*/
 @media (min-width:74.75em) {
-  .hoverMascara .hover_servicos_hover {
+  /* .hoverMascara .hover_servicos_hover {
     width: 100%;
     height: 100%;
-  }
+  } */
 
 
   .section-servicos {
@@ -889,7 +933,16 @@ body {
 
   .section-servicos .content {
     justify-content: center;
-    gap: 3em;
+  }
+
+  .section-servicos .appFoto {
+    width: 18em;
+    height: 18em;
+  }
+
+  .hover_servicos {
+    flex: 1 1 23em;
+    gap: 2em;
   }
 }
 
@@ -911,17 +964,8 @@ body {
     font-size: 2.2em;
   }
 
-  .section-servicos {
-    padding: 2em 5em;
-  }
-
-
   .section-servicos .descricao {
     font-size: 1.5em;
-  }
-
-  .hover_servicos.appIcone {
-    width: 500px;
   }
 
   .section-localizacao {
