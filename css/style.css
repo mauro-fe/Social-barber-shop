@@ -232,11 +232,6 @@ body {
 
 @keyframes mexer {}
 
-.main_header .agendar-horario:hover {
-  color: red;
-  background-color: #fff;
-}
-
 .mobile_action {
   color: #444444;
   text-align: center;
