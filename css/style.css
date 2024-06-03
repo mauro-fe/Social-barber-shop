@@ -29,6 +29,10 @@ body {
   color: #e83654;
 }
 
+.horario {
+  color: #ffffff;
+}
+
 .title {
   width: 100%;
   float: left;
@@ -165,7 +169,7 @@ body {
 
 .header_welcome .title {
   padding: 0;
-  color: #aaa;
+  color: #ffffffd2;
   font-size: 1em;
   text-transform: none;
   overflow: hidden;

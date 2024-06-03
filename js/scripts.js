@@ -25,3 +25,25 @@ $(function () {
         return false;
     });
 });
+
+function horario() {
+    let diaAtual = new Date()
+    let horaAtual = diaAtual.getHours()
+    let headerWelcome = document.getElementsByClassName("header_welcome")[0]
+    let h2 = document.createElement("h2")
+
+    headerWelcome.appendChild(h2)
+    h2.classList.add("title")
+
+    if (horaAtual < 12 && horaAtual > 5) {
+        horaAtual = "Bom dia"
+    } else if (horaAtual < 18 && horaAtual > 12) {
+        horaAtual = "Boa tarde"
+    } else {
+        horaAtual = "Boa noite"
+    }
+    h2.innerHTML = `<b class="horario">${horaAtual}</b>, seja bem vindo à <b class="destaque">barbearia Social Barber Shop</b>`
+
+}
+
+horario()
