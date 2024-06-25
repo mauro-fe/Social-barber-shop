@@ -234,8 +234,6 @@ body {
   }
 }
 
-@keyframes mexer {}
-
 .mobile_action {
   color: #444444;
   text-align: center;
@@ -246,6 +244,7 @@ body {
   float: right;
   cursor: pointer;
   margin: 15px 8px;
+  overflow: hidden;
 }
 
 .mobile_action.active {
