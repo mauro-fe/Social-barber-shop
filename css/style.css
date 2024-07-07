@@ -506,6 +506,7 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 1em 0 2.5em 0;
+  margin: 1em;
 }
 
 .section-localizacao .content {
@@ -671,6 +672,10 @@ body {
   .section-valores_tabela td {
     border: 1px solid #4a688e;
     padding: .5em 1em .5em .5em;
+  }
+
+  .section-localizacao {
+    margin: 2em;
   }
 
   .main_footer .info {
