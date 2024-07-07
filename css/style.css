@@ -462,7 +462,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--secundary);
   padding-top: 2em;
   padding-bottom: 5em;
 
@@ -670,7 +670,7 @@ body {
 
   .section-valores_tabela th,
   .section-valores_tabela td {
-    border: 1px solid #4a688e;
+    border: 1px solid var(--secundary);
     padding: .5em 1em .5em .5em;
   }
 
