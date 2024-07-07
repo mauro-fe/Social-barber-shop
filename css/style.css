@@ -170,13 +170,12 @@ body {
   padding: .5em 0;
   background-color: var(--primary);
   text-align: center;
-
 }
 
 .header_welcome .title {
   padding: 0;
   color: #ffffffd2;
-  font-size: .9em;
+  font-size: .7em;
   text-transform: none;
   overflow: hidden;
 
@@ -266,6 +265,11 @@ body {
     position: fixed;
     left: -100%;
     background-color: var(--primary);
+    top: 0;
+    width: 50%;
+    min-width: 200px;
+    max-width: 360px;
+    max-height: min-content;
     overflow: hidden;
     overflow-y: auto;
     -webkit-box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.75);
@@ -557,9 +561,21 @@ body {
   color: #fff5;
 }
 
+/*350PX BREAKPOINT*/
+/*350 dividido por 16 = 30em*/
+@media (min-width:21.87em) {
+  .header_welcome .title {
+    font-size: .8rem;
+  }
+}
+
 /*480PX BREAKPOINT*/
 /*480 dividido por 16 = 30em*/
 @media (min-width:30em) {
+
+  .header_welcome .title {
+    font-size: 1.1rem;
+  }
 
   .box-css {
     float: left;
@@ -581,6 +597,10 @@ body {
 /*600 dividido por 16 = 37.5em*/
 
 @media (min-width: 37.5em) {
+
+  .header_welcome .title {
+    font-size: 1.4rem;
+  }
 
   .title {
     font-size: 1.8em;
@@ -649,6 +669,7 @@ body {
 
   .section-valores_tabela th,
   .section-valores_tabela td {
+    border: 1px solid #4a688e;
     padding: .5em 1em .5em .5em;
   }
 
@@ -803,7 +824,7 @@ body {
     position: absolute;
     width: 0%;
     height: 4px;
-    background-color: var(--primary);
+    background-color: #000;
     bottom: 0;
     left: 0;
     transition: width .4s ease-in-out;
