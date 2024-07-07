@@ -13,7 +13,7 @@ $(function () {
 
     window.addEventListener("scroll", function () {
         var mainHeader = document.querySelector(".main_header")
-        mainHeader.classList.toggle("fixed", window.scrollY > 0)
+        mainHeader.classList.toggle("fixed", window.scrollY > 50)
     })
 
     //Scroll Ancora
@@ -35,9 +35,9 @@ function horario() {
     headerWelcome.appendChild(h2)
     h2.classList.add("title")
 
-    if (horaAtual < 12 && horaAtual > 5) {
+    if (horaAtual > 5 && horaAtual < 12) {
         horaAtual = "Bom dia"
-    } else if (horaAtual < 18 && horaAtual > 12) {
+    } else if (horaAtual < 18) {
         horaAtual = "Boa tarde"
     } else {
         horaAtual = "Boa noite"
@@ -45,5 +45,4 @@ function horario() {
     h2.innerHTML = `<b class="horario">${horaAtual}</b>, seja bem vindo à <b class="destaque">barbearia Social Barber Shop</b>`
 
 }
-
 horario()
