@@ -5,7 +5,8 @@
 }
 
 :root {
-  --backgroundVerde: #000;
+  --primary: #000;
+  --secundary: #fff;
 
 }
 
@@ -31,7 +32,7 @@ body {
 }
 
 .vermelho {
-  color: #e83654;
+  color: #fff;
 }
 
 .horario {
@@ -112,7 +113,7 @@ body {
   width: 0%;
   height: 100%;
   display: block;
-  background: #396992;
+  background: var(--primary);
   position: absolute;
   -ms-transform: skewX(-15deg);
   -webkit-transform: skewX(-15deg);
@@ -133,7 +134,7 @@ body {
   width: 0%;
   height: 100%;
   display: block;
-  background: #e65974;
+  background: var(--primary);
   position: absolute;
   -ms-transform: skewX(-15deg);
   -webkit-transform: skewX(-15deg);
@@ -167,7 +168,7 @@ body {
 
 .header_welcome {
   padding: .5em 0;
-  background-color: var(--backgroundVerde);
+  background-color: var(--primary);
   text-align: center;
 
 }
@@ -189,8 +190,7 @@ body {
 
 .main_header {
   z-index: 99;
-  transition: 5s;
-
+  transition: .5s;
 }
 
 .main_header.fixed {
@@ -236,8 +236,8 @@ body {
 
   to {
     transform: scale(100%);
-    color: red;
-    background-color: var(--backgroundVerde);
+    color: rgb(255, 0, 0);
+    background-color: var(--primary);
   }
 }
 
@@ -255,7 +255,7 @@ body {
 }
 
 .mobile_action.active {
-  color: #e83654;
+  color: var(--primary);
 }
 
 /*MENU*/
@@ -265,7 +265,7 @@ body {
   .main_header_nav {
     position: fixed;
     left: -100%;
-    background-color: var(--backgroundVerde);
+    background-color: var(--primary);
     top: 0;
     width: 50%;
     min-width: 200px;
@@ -292,7 +292,7 @@ body {
     width: 100%;
     padding: .5em 0;
     text-decoration: none;
-    color: #e83654;
+    color: var(--secundary);
     font-size: 1em;
     text-align: center;
   }
@@ -439,7 +439,7 @@ body {
   text-align: center;
   overflow: hidden;
   font-size: 1.5em;
-  color: #555;
+  color: var(--primary);
 }
 
 .section-servicos .servicos_separator {
@@ -476,7 +476,7 @@ body {
 .section-valores_tabela {
   border-spacing: 0;
   color: #fff;
-  background-color: var(--backgroundVerde);
+  background-color: var(--primary);
   border-radius: 10px;
   overflow: hidden;
   padding: .4em;
@@ -525,7 +525,7 @@ body {
 
 /*FOOTER*/
 .main_footer {
-  background-color: var(--backgroundVerde);
+  background-color: var(--primary);
   color: #fff;
   display: flex;
   justify-content: center;
