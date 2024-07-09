@@ -33,6 +33,24 @@
     elements.forEach((servico) => myObserver.observe(servico))
     //Termina itens entrando suavemente
 
+    //Começa itens entrando suavemente
+
+
+    const myObserver2 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show')
+            } else {
+                entry.target.classList.remove('show')
+            }
+        })
+    })
+
+    const elements2 = document.querySelectorAll('.hidden2')
+
+    elements.forEach((servico) => myObserver.observe(servico))
+    //Termina itens entrando suavemente
+
 
     //Scroll Ancora
     // let $doc = $('html, body');
