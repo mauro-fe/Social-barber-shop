@@ -2,12 +2,29 @@
 
 * {
   font-family: "Roboto Condensed", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
   --primary: #000;
   --secundary: #fff;
+}
 
+.branco {
+  color: #fff;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
 
 body {
@@ -15,6 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(#000, #aaa 30%, #000);
+  transition: all .5s ease-in-out;
 }
 
 /*CLASS*/
@@ -23,18 +41,7 @@ body {
   box-shadow: 0 0 8px 2px #000;
 }
 
-.branco {
-  color: #ffffff;
-}
-
-.azul {
-  color: #000;
-}
-
-.vermelho {
-  color: #fff;
-}
-
+/* Define a cor do boas vindas no JavaScript */
 .horario {
   color: #ffffff;
 }
@@ -174,7 +181,7 @@ body {
 
 .header_welcome .title {
   padding: 0;
-  color: #ffffffd2;
+  color: #fff;
   font-size: .7em;
   text-transform: none;
   overflow: hidden;
@@ -276,6 +283,7 @@ body {
     -moz-box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.75);
     z-index: 99;
+    transition: 1s;
   }
 
   .main_header_nav_item {
@@ -311,7 +319,13 @@ body {
     float: right;
     display: block;
   }
+
+  .main_header_nav-abrir {
+    left: 0px;
+    transition: 1s;
+  }
 }
+
 
 /*PAG*/
 .coluna {
@@ -399,11 +413,7 @@ body {
   flex-wrap: nowrap;
 }
 
-.section-servicos .content {
-  flex-wrap: wrap;
-}
-
-.hover_servicos {
+.servicos {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,18 +422,18 @@ body {
 
 }
 
-.hover_servicos .teste {
-  overflow: hidden;
+.servicos .servicos-img {
   border-radius: 10%;
   box-shadow: 0 0 10px 2px #0009;
+  overflow: hidden;
 }
 
-.hover_servicos .appFoto:hover {
+.servicos .appFoto:hover {
   opacity: 100%;
   transform: scale(120%);
 }
 
-.hover_servicos .appFoto {
+.servicos .appFoto {
   height: 18em;
   width: 18em;
   opacity: 50%;
@@ -431,7 +441,7 @@ body {
 
 }
 
-.hover_servicos .descricao {
+.servicos .descricao {
   background-color: transparent;
   width: 100%;
   display: block;
@@ -443,8 +453,8 @@ body {
 
 .section-servicos .servicos_separator {
   display: block;
-  width: 70%;
-  height: 1px;
+  width: 100%;
+  height: 2px;
   background-color: #000;
   margin-bottom: 2em;
   box-shadow: 0px 2px 5px #000;
@@ -634,7 +644,7 @@ body {
     align-items: center;
   }
 
-  .hover_servicos {
+  .servicos {
     width: 50%;
   }
 
@@ -649,7 +659,7 @@ body {
     justify-content: space-around;
   }
 
-  .hover_servicos .appFoto {
+  .servicos .appFoto {
     border-radius: 10%;
     height: 15em;
     width: 15em;
@@ -756,7 +766,7 @@ body {
 
   .header_welcome .destaque {
     letter-spacing: 3px;
-    padding: .3em .3em;
+    padding: 1em .3em;
 
   }
 }
@@ -764,12 +774,6 @@ body {
 /*1196PX BREAKPOINT*/
 /*1196 dividido por 16 = 74.75em*/
 @media (min-width:74.75em) {
-  /* .hoverMascara .hover_servicos_hover {
-    width: 100%;
-    height: 100%;
-  } */
-
-
   .section-servicos {
     padding: 2em 0;
   }
@@ -781,7 +785,7 @@ body {
 @media (min-width:80em) {
 
   .fixed+.main_content {
-    padding-top: 104px;
+    padding-top: 100px;
   }
 
   .main_content .topoPag .branco {
@@ -810,7 +814,7 @@ body {
   }
 
   .main_header_nav_item {
-    padding: 1em 1em;
+    padding: 1.3em 1em;
   }
 
   .main_header_nav_item>a {
@@ -854,7 +858,7 @@ body {
     height: 18em;
   }
 
-  .hover_servicos {
+  .servicos {
     flex: 1 1 23em;
     gap: 1em;
   }

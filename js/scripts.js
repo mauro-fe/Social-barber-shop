@@ -1,30 +1,30 @@
-$(function () {
+(function () {
+    // Começa o abre e fecha o menu do mobile
+    let mobile_action = document.querySelector(".mobile_action")
+    mobile_action.addEventListener("click", function () {
+        let main_header_nav = document.querySelector(".main_header_nav")
+        main_header_nav.classList.toggle("main_header_nav-abrir")
+    })
+    // Termina o abre e fecha o menu do mobile
 
-    //CONTROLE DO MENU MOBILE
-    $('.mobile_action').click(function () {
-        if (!$(this).hasClass('active')) {
-            $(this).addClass('active');
-            $('.main_header_nav').animate({ 'left': '0px' }, 800);
-        } else {
-            $(this).removeClass('active');
-            $('.main_header_nav').animate({ 'left': '-100%' }, 1000);
-        }
-    });
-
+    // Começa o fixa o menu
     window.addEventListener("scroll", function () {
         var mainHeader = document.querySelector(".main_header")
-        mainHeader.classList.toggle("fixed", window.scrollY > 50)
+        mainHeader.classList.toggle("fixed", window.scrollY > 30)
     })
+    // Termina o fixa o menu
+
 
     //Scroll Ancora
-    let $doc = $('html, body');
-    $('.scrollSuave').click(function () {
-        $doc.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 1000);
-        return false;
-    });
+    // let $doc = $('html, body');
+    // $('.scrollSuave').click(function () {
+    //     $doc.animate({
+    //         scrollTop: $($.attr(this, 'href')).offset().top
+    //     }, 1000);
+    //     return false;
+    // });
 
+    // Começa o define o horario de boas vindas
     function horario() {
         let diaAtual = new Date()
         let horaAtual = diaAtual.getHours()
@@ -45,5 +45,22 @@ $(function () {
 
     }
     horario()
-});
+    // Termina o define o horario de boas vindas
 
+    //Começa itens entrando suavemente
+    const elements = document.querySelectorAll(".elements")
+
+    const myObserver = new IntersectionObserver((teste) => {
+        teste.forEach((teste2) => {
+            if (teste2.isIntersecting) {
+                return teste2.target.classList.add("show")
+            } else {
+                return teste2.target.classList.remove("show")
+            }
+        })
+    })
+
+    elements.forEach((servico) => myObserver.observe(servico))
+    //Termina itens entrando suavemente
+
+}());
