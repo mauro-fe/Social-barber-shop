@@ -14,18 +14,7 @@
   color: #fff;
 }
 
-.hidden {
-  opacity: 0;
-  filter: blur(10px);
-  transition: all 1s ease-in-out;
-  transform: translateX(-100%);
-}
 
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
 
 body {
   display: flex;
@@ -893,4 +882,17 @@ body {
   .section-localizacao .content .map {
     height: 35em;
   }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
