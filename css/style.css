@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(#000, #aaa 30%, #000);
-  transition: all .5s ease-in-out;
+  transition: all .2s;
 }
 
 /*CLASS*/
@@ -888,7 +888,7 @@ body {
 .hidden {
   opacity: 0;
   filter: blur(10px);
-  transition: all 1s ease-in-out;
+  transition: all .7s ease-in-out;
   transform: translateX(-100%);
 }
 
