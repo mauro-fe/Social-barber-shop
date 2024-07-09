@@ -15,6 +15,25 @@
     // Termina o fixa o menu
 
 
+    //Começa itens entrando suavemente
+
+
+    const myObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show')
+            } else {
+                entry.target.classList.remove('show')
+            }
+        })
+    })
+
+    const elements = document.querySelectorAll('.hidden')
+
+    elements.forEach((servico) => myObserver.observe(servico))
+    //Termina itens entrando suavemente
+
+
     //Scroll Ancora
     // let $doc = $('html, body');
     // $('.scrollSuave').click(function () {
@@ -47,20 +66,5 @@
     horario()
     // Termina o define o horario de boas vindas
 
-    //Começa itens entrando suavemente
-    const elements = document.querySelectorAll(".elements")
-
-    const myObserver = new IntersectionObserver((teste) => {
-        teste.forEach((teste2) => {
-            if (teste2.isIntersecting) {
-                return teste2.target.classList.add("show")
-            } else {
-                return teste2.target.classList.remove("show")
-            }
-        })
-    })
-
-    elements.forEach((servico) => myObserver.observe(servico))
-    //Termina itens entrando suavemente
 
 }());
