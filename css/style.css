@@ -6,8 +6,9 @@
 }
 
 :root {
-  --primary: #000;
+  --primary: #252525;
   --secundary: #fff;
+  --tertiary: #273b42;
 }
 
 .branco {
@@ -21,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(#000, #aaa 30%, #000);
+  background: linear-gradient(#273b42, #000);
   transition: all .2s;
 }
 
@@ -165,7 +166,7 @@ body {
 
 .header_welcome {
   padding: .5em 0;
-  background-color: var(--primary);
+  background-color: var(--tertiary);
   text-align: center;
 }
 
@@ -475,7 +476,7 @@ body {
 .section-valores_tabela {
   border-spacing: 0;
   color: #fff;
-  background-color: var(--primary);
+  background-color: var(--tertiary);
   border-radius: 10px;
   overflow: hidden;
   padding: .4em;
@@ -525,7 +526,7 @@ body {
 
 /*FOOTER*/
 .main_footer {
-  background-color: var(--primary);
+  background-color: var(--tertiary);
   color: #fff;
   display: flex;
   justify-content: center;
