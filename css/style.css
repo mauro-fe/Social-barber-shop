@@ -29,7 +29,6 @@ body {
 /*CLASS*/
 .container {
   max-width: 95%;
-  box-shadow: 0 0 8px 2px #000;
 }
 
 /* Define a cor do boas vindas no JavaScript */

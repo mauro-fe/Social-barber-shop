@@ -1,0 +1,44 @@
+/* Estilos do contêiner e imagens */
+.carrossel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrossel img {
+    width: 500px;
+    display: none;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.carrossel img.active {
+    display: block;
+}
+
+/* Botões de navegação */
+.anterior,
+.proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.anterior {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.proximo {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
