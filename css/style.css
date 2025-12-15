@@ -471,11 +471,13 @@ body {
   overflow: hidden;
   padding: 0.4em;
   box-shadow: 0 0 20px 5px #fff;
+  width: 80%;
 }
 
 .section-valores_tabela th {
   text-transform: uppercase;
   font-size: 1.2em;
+  width: 180px;
 }
 
 .section-valores_tabela td {
@@ -654,11 +656,6 @@ body {
     box-shadow: 0;
   }
 
-  .section-valores_tabela {
-    width: 80%;
-    padding: 1.2em;
-  }
-
   .section-valores_tabela th,
   .section-valores_tabela td {
     border: 1px solid var(--secundary);
@@ -690,7 +687,6 @@ body {
   }
 
   .section-valores_tabela {
-    width: 70%;
     font-size: 1.4em;
   }
 
